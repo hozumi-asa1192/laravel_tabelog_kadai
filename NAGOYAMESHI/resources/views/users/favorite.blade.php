@@ -36,12 +36,12 @@
                      </form>
                  </div>
                  <div class="col-md-2 d-flex align-items-center justify-content-end">
-                 <a class="btn btn-warning" href="{{ route('reservations.create',$favorite_shop->id) }}">予約をする</a>
+                    <a class="btn btn-warning" href="{{ route('reservations.create',$favorite_shop->id) }}">予約をする</a>
                  </div>
                 <hr class="mt-3">
              @endforeach
-         </div>
-         <div class="me-1 mb-5">
+        </div>
+        <div class="me-1 mb-5">
             {{ $favorite_shops->onEachSide(1)->links() }}
         </div>
      </div>

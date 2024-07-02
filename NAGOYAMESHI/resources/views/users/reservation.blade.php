@@ -43,7 +43,7 @@
              @endforeach
          </div>
          <div class="me-1 mb-5">
-         {{ $reservations->onEachSide(1)->links() }}
+            {{ $reservations->onEachSide(1)->links() }}
          </div>
      </div>
  </div>

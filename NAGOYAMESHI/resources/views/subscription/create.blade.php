@@ -48,7 +48,6 @@
     <script src="https://js.stripe.com/v3/"></script>
     <script>
         const stripeKey = "pk_test_51PDeXIRuOREDwSLK4sa4NwOV3gRg5SdesIvRShe73CyHJhn0pL77GMkyCLFIuEEybyyXY0WTMejHzKhdhKwH8h8p00796YzZaX"; 
-        console.log(stripeKey);
     </script>
     <script src="{{ asset('/js/stripe.js') }}"></script>
 @endsection

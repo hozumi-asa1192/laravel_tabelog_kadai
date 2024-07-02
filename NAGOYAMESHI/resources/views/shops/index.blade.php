@@ -11,9 +11,11 @@
             @if ($category)
                 <input type="hidden" name="category" value="{{ $category->id }}">
             @endif
+
             @if ($keyword)
                 <input type="hidden" name="keyword" value="{{ $keyword }}">
             @endif
+            
                 <select class="form-select form-select-sm" name="select_sort" onChange="this.form.submit();">
             @foreach ($sorts as $key => $value)
                 @if ($sorted === $value)
@@ -27,25 +29,25 @@
          </div>
         
         <form action="{{route('shops.index')}}" method="get">
-                    @csrf
-                    <div class="d-flex flex-wrap flex-sm-nowrap">
-                    <div class="me-2">
+         @csrf
+            <div class="d-flex flex-wrap flex-sm-nowrap">
+                <div class="me-2">
                     <select class="form-control form-select" name="category" id="category"> 
                         <option value="">カテゴリー</option>  
                         @foreach($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
-                    </div>
+                </div>
                     <div class="me-2 mb-2">
                         <input  type="text" class="form-control" placeholder="キーワード" name="keyword">
                     </div>
             
-                <div class="mb-4">
-                    <button type="submit" class="btn text-white shadow-sm w-20 nagoyameshi-btn">検索する</button>
-                </div>
-                    </form>
-        </div>
+                    <div class="mb-4">
+                        <button type="submit" class="btn text-white shadow-sm w-20 nagoyameshi-btn">検索する</button>
+                    </div>
+        </form>
+            </div>
             <div class="container">
              <div class="row">
                  @foreach($shops as $shop)
@@ -69,7 +71,7 @@
                  </div>
                  @endforeach
              </div>
-             </div>
+            </div>
          </div>
          <div class="mb-5 ms-3">
          {{ $shops->appends(request()->query())->onEachSide(1)->links() }}

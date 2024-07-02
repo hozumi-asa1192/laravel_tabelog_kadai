@@ -2,7 +2,7 @@
  
 @section('content')
 <div class="container">
-<a class="h5" href="#" onclick="history.back()" return false;>＜戻る</a>
+ <a class="h5" href="#" onclick="history.back()" return false;>＜戻る</a>
     <div class="text-center">
         <h1 class="mt-3 mb-5 fw-bold">予約内容</h1>
 
